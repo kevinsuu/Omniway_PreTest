@@ -11,12 +11,12 @@
 - 功能敘述: 註冊新帳號。
 - Request Body:
 
-```
-{
-"username": "example",
-"password": "password123"
-}
-```
+  ```
+  {
+  "username": "example",
+  "password": "password123"
+  }
+  ```
 
 - Response :
   - Sucess: 201 Created。
@@ -49,14 +49,14 @@
   - Authorization: Bearer <jwt_token>
 - Request Body:
 
-  ````
+  ```
   {
     "account":"kevin"
     "password": "password",
     "newPassword": "password123"
-  }```
+  }
 
-  ````
+  ```
 
 - Response :
   Sucess: 200 OK。
@@ -96,6 +96,9 @@
 
 ```
 git clone https://github.com/kevinsuu/Omniway_PreTest.git
+```
+
+```
 cd Omniway_PreTest
 docker-compose up --build -d
 ```
