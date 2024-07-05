@@ -31,7 +31,7 @@ export const login = async (req: Request, res: Response) => {
     try {
         const user = await User.findOne({ account });
         if (!user || !(await bcrypt.compare(password, user.password))) {
-            return res.status(401).json({ status: false, message: '使用者帳號或密碼無效' });  
+            return res.status(204).json({ status: false, message: '使用者帳號或密碼無效' });  
         }
 
         const token = generateToken(user, process.env.JWT_EXPIRES_IN!);

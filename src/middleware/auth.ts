@@ -20,7 +20,7 @@ export const authenticateJWT = async (req: Request, res: Response, next: NextFun
             next();
         }  catch (err:any) {
             if (err.name === 'TokenExpiredError') {
-                return res.status(202).json({ status: false, message: 'Token 已過期' });
+                return res.status(202).json({ status: false, message: 'Token 已過期，帳戶已被自動登出' });
             } else {
                 return res.status(404).json({ status: false, message: '無效 Token，請重新獲取 Token' });
             }
